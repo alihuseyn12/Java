@@ -1,14 +1,26 @@
-public class Main {
-    public  static void main(String[] args){
+import java.util.Scanner;
 
+public  class Main {
+    public static void main(String[] args){
 
+        Scanner scanner=new Scanner(System.in);
 
-        BabelSort bl= new BabelSort();
-        int []arr ={5,8,7,4,22};
-        bl.babelSort(arr);
+        BabelSort bs=new BabelSort();
 
-        for (int i=0;i<arr.length;i++){
-            System.out.print(" "+arr[i]);
+        int []arr=new int[5];
+
+        for (int i = 0; i < arr.length ; i++) {
+            arr[i]=scanner.nextInt();
+
         }
+        bs.babelSort(arr);
+        bs.print(arr);
+        scanner.close();
+
+
+
+
+
+
     }
 }
